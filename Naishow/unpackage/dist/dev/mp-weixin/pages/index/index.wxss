@@ -1,0 +1,93 @@
+
+.swiper {
+	width: 100%;
+	height: 900rpx;
+}
+.swiperimg {
+	width: 100%;
+	height: 900rpx;
+}
+.comm {
+	width: 100%;
+	height: 900rpx;
+	background-color: #EEF6DE;
+}
+.coupon {
+	width: 90%;
+	height: 220rpx;
+	margin: 5%;
+}
+.coupon2 {
+	width: 90%;
+	height: 480rpx;
+	margin: 10% 5%;
+}
+.new {
+	width: 100%;
+	height: 1000rpx;
+}
+.newimg {
+	width: 40%;
+	height: 130rpx;
+	margin: 20% 0 0 30%;
+}
+.newbanner {
+	width: 95%;
+	height: 400rpx;
+	margin: 2.5%;
+}
+.newcomm {
+	width: 100%;
+	height: 450rpx;
+	margin: 2.5% 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.newlist {
+	width: 48%;
+	height: 450rpx;
+	border: solid 2rpx #BBCA91;
+	border-radius: 20rpx;
+	margin: 0 2%;
+}
+.newlist image {
+	width: 100%;
+	height: 300rpx;
+}
+.new_name {
+	color: #686868;
+	margin: 2%;
+}
+.new_price {
+	font-size: 40rpx;
+	margin: 5% 0 0 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.teaimg {
+	width: 40%;
+	height: 100rpx;
+	margin: 50% 0 0 30%;
+}
+.service{
+	position: fixed;
+	bottom: 60rpx;
+	right: 20rpx;
+	z-index: 2;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	background-color: white;
+}
+.serv{
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	margin: 1%;
+}
+

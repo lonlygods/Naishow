@@ -1,0 +1,100 @@
+
+.big {
+	height: 2200rpx;
+}
+.swiper {
+	width: 100%;
+	height: 900rpx;
+}
+.swiperimg {
+	width: 100%;
+	height: 900rpx;
+}
+.price {
+	font-size: 38rpx;
+	color: #6CBE72;
+	font-weight: bold;
+	margin: 3%;
+}
+.intro {
+	font-size: 34rpx;
+	margin: 3%;
+}
+.youzan {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	margin: 5% 3%;
+}
+.youzanimg {
+	width: 25%;
+	height: 50rpx;
+}
+.youzan text {
+	color: #646566;
+	margin: 0 0 0 5%;
+}
+.mid {
+	width: 100%;
+	height: 200rpx;
+	background-color: #F9F9F9;
+}
+.freight {
+	width: 100%;
+	height: 80rpx;
+	background-color: #FFFFFF;
+	margin: 3% 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	font-size: 34rpx;
+}
+.left {
+	margin: 2% 0 0 3%;
+}
+.right {
+	margin: 2% 3% 0 0;
+	color: #A5A6A8;
+}
+.yunfei {
+	color: #A5A6A8;
+}
+.popimg{
+	width: 100%;
+	height: 200rpx;
+	margin: 5%;
+}
+.poptop{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.pop1{
+	width: 30%;
+	height: 200rpx;
+}
+.pop2{
+	width: 70%;
+	height: 200rpx;
+	margin: 15% 0 0 5%;
+}
+.num{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	margin: -5% 0 0 0;
+}
+.buynum{
+	margin: 0 0 0 5%;
+}
+.next{
+	margin: 10% 0 0 5%;
+	width: 90%;
+}
+

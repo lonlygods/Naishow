@@ -6,12 +6,12 @@
 			</swiper-item>
 		</swiper>
 		<view class="comm">
-			<image src="../../static/images/优惠券.png" class="coupon"></image>
-			<image src="../../static/images/home4.png" class="coupon2"></image>
+			<image src="https://s1.ax1x.com/2020/05/07/YeGLCQ.png" class="coupon"></image>
+			<image src="https://s1.ax1x.com/2020/05/07/YeGO3j.png" class="coupon2"></image>
 		</view>
 		<view class="new">
-			<image src="../../static/images/新品上市.png" class="newimg"></image>
-			<image src="../../static/images/new.png" class="newbanner"></image>
+			<image src="https://s1.ax1x.com/2020/05/07/YeG7E8.png" class="newimg"></image>
+			<image src="https://s1.ax1x.com/2020/05/07/YeGIDP.png" class="newbanner"></image>
 			<view class="newcomm">
 				<view class="newlist" v-for="(n,index) in newcomm" :key="index" @click="news(n)">
 					<image :src="n.img" class="newlistimg"></image>
@@ -26,10 +26,10 @@
 			</view>
 		</view>
 		<view class="new">
-			<image src="../../static/images/精品茶叶.png" class="teaimg"></image>
-			<image src="../../static/images/teabanner.png" class="newbanner"></image>
+			<image src="https://s1.ax1x.com/2020/05/07/YeGoHf.png" class="teaimg"></image>
+			<image src="https://s1.ax1x.com/2020/05/07/YeG5ut.png" class="newbanner"></image>
 			<view class="newcomm">
-				<view class="newlist" v-for="(t,index) in teacomm" :key="t.pid">
+				<view class="newlist" v-for="(t,index) in teacomm" :key="t.pid" @click="tea(t)">
 					<image :src="t.img" class="newlistimg"></image>
 					<view class="new_name">
 						<text>{{t.name}}</text>
@@ -42,7 +42,7 @@
 			</view>
 		</view>
 		<view class="service">
-			<image src="../../static/images/客服.png" class="serv"></image>
+			<image src="https://s1.ax1x.com/2020/05/07/YefYVK.png" class="serv"></image>
 		</view>
 	</view>
 </template>
@@ -52,48 +52,48 @@
 		data() {
 			return {
 				swiper: [{
-						img: '../../static/images/home2.png'
+						img: 'https://s1.ax1x.com/2020/05/07/Ye8ZW9.png'
 					},
 					{
-						img: '../../static/images/home1.png'
+						img: 'https://s1.ax1x.com/2020/05/07/Ye8VJJ.png'
 					},
 					{
-						img: '../../static/images/home3.png'
+						img: 'https://s1.ax1x.com/2020/05/07/Ye8Ei4.png'
 					}
 				],
 				newcomm: [{
 						pid: 1,
-						img: '../../static/images/newleft.png',
+						img: 'https://s1.ax1x.com/2020/05/07/YeGhjI.png',
 						name: '"梅"你不行挂画',
 						price: '119',
 						intro:'奈雪"梅你不行"主题挂画 夏日杨梅周边',
 						primary_price: '149',
 						slideshow:[
 							{
-								slideshow:'../../static/images/commswiper1.png'
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye3YrV.png'
 							},
 							{
-								slideshow:'../../static/images/commswiper2.png'
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye37sP.png'
 							}
 						],
 						num:'19'
 					},
 					{
 						pid: 2,
-						img: '../../static/images/newright.png',
+						img: 'https://s1.ax1x.com/2020/05/07/YeGW3d.png',
 						name: '"梅"你不行托特包',
 						price: '99',
 						intro:'奈雪"梅你不行"主题托特包 夏日杨梅周边',
 						primary_price: '119',
 						slideshow:[
 							{
-								slideshow:'../../static/images/commswiper3.png'
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye3zzn.png'
 							},
 							{
-								slideshow:'../../static/images/commswiper4.png'
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye3xRs.png'
 							},
 							{
-								slideshow:'../../static/images/commswiper5.png'
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye3vGj.png'
 							}
 						],
 						num:'32'
@@ -101,28 +101,69 @@
 				],
 				teacomm: [{
 						pid: 1,
-						img: '../../static/images/tealeft.png',
+						img: 'https://s1.ax1x.com/2020/05/07/YeGfgA.png',
 						name: '飘香茗茶系列',
 						intro:'奈雪的茶 品尝悠闲·茶礼盒',
 						price: '129',
+						slideshow:[
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye8yWj.jpg'
+							},
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye8sYQ.jpg'
+							},
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye8rFg.jpg'
+							},
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye80w8.jpg'
+							},
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye8BTS.jpg'
+							}
+						],
 						num:'50'
 					},
 					{
 						pid: 2,
-						img: '../../static/images/tearight.png',
+						img: 'https://s1.ax1x.com/2020/05/07/YeGb4g.png',
 						name: '雅月·名优乌龙',
 						intro:'奈雪【小茶盒】雅月·名优乌龙 上等乌龙',
 						price: '59',
+						slideshow:[
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye8cSs.jpg'
+							},
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye8gln.jpg'
+							},
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye82yq.jpg'
+							},
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye8RO0.jpg'
+							},
+							{
+								slideshow:'https://s1.ax1x.com/2020/05/07/Ye8fmV.jpg'
+							}
+						],
 						num:'32'
 					}
 				],
-				kefu:'../../static/images/客服.jpg'
+				kefu:'https://s1.ax1x.com/2020/05/07/YeD26O.png'
 			}
 		},
 		methods: {
 			news(n){
 				console.log(n)
 				var news = JSON.stringify(n);
+				uni.navigateTo({
+					url:'../commdity_details/commdity_details?news='+ encodeURIComponent(news)
+				})
+			},
+			tea(t){
+				console.log(t)
+				var news = JSON.stringify(t);
 				uni.navigateTo({
 					url:'../commdity_details/commdity_details?news='+ encodeURIComponent(news)
 				})

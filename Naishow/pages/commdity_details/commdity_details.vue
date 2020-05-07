@@ -11,7 +11,7 @@
 				<text class="intro">{{commdity.intro}}</text>
 			</view>
 			<view class="youzan">
-				<image src="../../static/images/有赞担保.png" class="youzanimg"></image>
+				<image src="https://s1.ax1x.com/2020/05/07/YmKmjK.png" class="youzanimg"></image>
 				<text>全程护航，请放心购买</text>
 			</view>
 		</view>
@@ -58,11 +58,11 @@
 						<text>购买数量:</text>
 					</view>
 					<view class="">
-						<van-stepper value="1" min="1" :max="commdity.num" />
+						<van-stepper value="1" min="1" :max="commdity.num" @change="onChange" />
 					</view>
 				</view>
 				<view class="next">
-					<van-button type="large" color="#6CBE72" round>下一步</van-button>
+					<van-button type="large" color="#6CBE72" round @click="next">下一步</van-button>
 				</view>
 			</van-popup>
 		</view>
@@ -76,7 +76,8 @@
 				commdity: [], //商品
 				slideshow: [], //轮播
 				show: false,
-				popupimg:''
+				popupimg:'',
+				step:'1'
 			}
 		},
 		onLoad(news) {
@@ -95,6 +96,17 @@
 			},
 			onClose() {
 				this.show = false
+			},
+			onChange(event) {
+			    console.log(event.detail);
+				this.step = event.detail;
+			},
+			next(){
+				var commdity = JSON.stringify(this.commdity);
+				var steps = this.step;
+				uni.navigateTo({
+					url:'../ack_order/ack_order?comm=' + encodeURIComponent(commdity) + "&step=" + steps
+				})
 			}
 		}
 	}

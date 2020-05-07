@@ -1,0 +1,43 @@
+
+.wxsite {
+	width: 100%;
+	height: 100rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	background-color: #FCFCFC;
+}
+.wechat {
+	width: 50rpx;
+	height: 50rpx;
+}
+.wxleft {
+	margin: 5% 0 0 5%;
+}
+.wxleft text {
+	position: absolute;
+	top: 38rpx;
+}
+.wxright {
+	margin: 5% 5% 0 0;
+}
+.check {
+	position: absolute;
+	margin: 2% 0 0 0;
+}
+.danyuan{
+	padding: 1% 4%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 14px;
+	height: 30px;
+	border-bottom: solid 1rpx #F4F5F6;
+}
+.danyuan view{
+	width: 23%;
+}
+

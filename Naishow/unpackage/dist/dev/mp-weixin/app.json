@@ -1,10 +1,13 @@
 {
   "pages": [
+    "pages/site/site",
     "pages/index/index",
     "pages/shopping/shopping",
     "pages/baby/baby",
     "pages/my/my",
-    "pages/commdity_details/commdity_details"
+    "pages/commdity_details/commdity_details",
+    "pages/ack_order/ack_order",
+    "pages/add_site/add_site"
   ],
   "subPackages": [],
   "window": {
@@ -57,6 +60,10 @@
     "van-goods-action": "/wxcomponents/vant/goods-action/index",
     "van-goods-action-icon": "/wxcomponents/vant/goods-action-icon/index",
     "van-goods-action-button": "/wxcomponents/vant/goods-action-button/index",
-    "van-button": "/wxcomponents/vant/button/index"
+    "van-button": "/wxcomponents/vant/button/index",
+    "van-field": "/wxcomponents/vant/field/index",
+    "van-checkbox": "/wxcomponents/vant/checkbox/index",
+    "van-checkbox-group": "/wxcomponents/vant/checkbox-group/index",
+    "van-area": "/wxcomponents/vant/area/index"
   }
 }

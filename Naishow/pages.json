@@ -1,6 +1,12 @@
 {
 	"pages": [
 		{
+		    "path" : "pages/site/site",
+		    "style" : {
+				"navigationBarTitleText": "地址列表"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "奈雪商城"
@@ -30,6 +36,20 @@
 				"navigationBarTitleText": "商品详情"
 			}
         }
+        ,
+		
+		{
+            "path" : "pages/ack_order/ack_order",
+            "style" : {
+				"navigationBarTitleText": "确认订单"
+			}
+        }
+        ,{
+            "path" : "pages/add_site/add_site",
+            "style" : {
+				"navigationBarTitleText": "新增地址"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -47,7 +67,11 @@
 			"van-goods-action": "/wxcomponents/vant/goods-action/index",
 			"van-goods-action-icon": "/wxcomponents/vant/goods-action-icon/index",
 			"van-goods-action-button": "/wxcomponents/vant/goods-action-button/index",
-			"van-button": "/wxcomponents/vant/button/index"
+			"van-button": "/wxcomponents/vant/button/index",
+			"van-field": "/wxcomponents/vant/field/index",
+			"van-checkbox": "/wxcomponents/vant/checkbox/index",
+			"van-checkbox-group": "/wxcomponents/vant/checkbox-group/index",
+			"van-area": "/wxcomponents/vant/area/index"
 		}
 	},
 	"tabBar": {

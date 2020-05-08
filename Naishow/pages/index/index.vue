@@ -41,7 +41,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="service">
+		<view class="service" @click="phone">
 			<image src="https://s1.ax1x.com/2020/05/07/YefYVK.png" class="serv"></image>
 		</view>
 	</view>
@@ -150,7 +150,8 @@
 						num:'32'
 					}
 				],
-				kefu:'https://s1.ax1x.com/2020/05/07/YeD26O.png'
+				kefu:'https://s1.ax1x.com/2020/05/07/YeD26O.png',
+				tel:'15036637653'
 			}
 		},
 		methods: {
@@ -166,6 +167,18 @@
 				var news = JSON.stringify(t);
 				uni.navigateTo({
 					url:'../commdity_details/commdity_details?news='+ encodeURIComponent(news)
+				})
+			},
+			phone(){
+				var that = this;
+				uni.makePhoneCall({
+					phoneNumber: that.tel,
+					success(res) {
+						console.log('调用成功')
+					},
+					fail(rec) {
+						console.log('调用失败')
+					}
 				})
 			}
 		}
@@ -266,9 +279,9 @@
 		background-color: white;
 	}
 	.serv{
-		width: 80rpx;
-		height: 80rpx;
+		width: 50rpx;
+		height: 50rpx;
 		border-radius: 50%;
-		margin: 1%;
+		margin: 15%;
 	}
 </style>

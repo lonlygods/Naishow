@@ -1,11 +1,12 @@
 {
 	"pages": [
 		{
-		    "path" : "pages/site/site",
-		    "style" : {
-				"navigationBarTitleText": "地址列表"
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "个人中心"
 			}
-		},
+		}
+		,
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -25,12 +26,6 @@
 			}
 		},
 		{
-			"path": "pages/my/my",
-			"style": {
-				"navigationBarTitleText": "个人中心"
-			}
-		}
-	    ,{
             "path" : "pages/commdity_details/commdity_details",
             "style" : {
 				"navigationBarTitleText": "商品详情"
@@ -39,17 +34,24 @@
         ,
 		
 		{
-            "path" : "pages/ack_order/ack_order",
-            "style" : {
-				"navigationBarTitleText": "确认订单"
-			}
-        }
-        ,{
             "path" : "pages/add_site/add_site",
             "style" : {
 				"navigationBarTitleText": "新增地址"
 			}
-        }
+        },
+		{
+		    "path" : "pages/ack_order/ack_order",
+		    "style" : {
+				"navigationBarTitleText": "确认订单"
+			}
+		}
+		,
+		{
+		    "path" : "pages/site/site",
+		    "style" : {
+				"navigationBarTitleText": "地址列表"
+			}
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -71,7 +73,11 @@
 			"van-field": "/wxcomponents/vant/field/index",
 			"van-checkbox": "/wxcomponents/vant/checkbox/index",
 			"van-checkbox-group": "/wxcomponents/vant/checkbox-group/index",
-			"van-area": "/wxcomponents/vant/area/index"
+			"van-area": "/wxcomponents/vant/area/index",
+			"van-row": "/wxcomponents/vant/row/index",
+			"van-col": "/wxcomponents/vant/col/index",
+			"van-grid": "/wxcomponents/vant/grid/index",
+			"van-grid-item": "/wxcomponents/vant/grid-item/index"
 		}
 	},
 	"tabBar": {

@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/site/site",
+    "pages/my/my",
     "pages/index/index",
     "pages/shopping/shopping",
     "pages/baby/baby",
-    "pages/my/my",
     "pages/commdity_details/commdity_details",
+    "pages/add_site/add_site",
     "pages/ack_order/ack_order",
-    "pages/add_site/add_site"
+    "pages/site/site"
   ],
   "subPackages": [],
   "window": {
@@ -64,6 +64,11 @@
     "van-field": "/wxcomponents/vant/field/index",
     "van-checkbox": "/wxcomponents/vant/checkbox/index",
     "van-checkbox-group": "/wxcomponents/vant/checkbox-group/index",
-    "van-area": "/wxcomponents/vant/area/index"
-  }
+    "van-area": "/wxcomponents/vant/area/index",
+    "van-row": "/wxcomponents/vant/row/index",
+    "van-col": "/wxcomponents/vant/col/index",
+    "van-grid": "/wxcomponents/vant/grid/index",
+    "van-grid-item": "/wxcomponents/vant/grid-item/index"
+  },
+  "sitemapLocation": "sitemap41.json"
 }

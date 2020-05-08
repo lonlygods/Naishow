@@ -102,10 +102,13 @@
 				this.step = event.detail;
 			},
 			next(){
-				var commdity = JSON.stringify(this.commdity);
+				// var commdity = JSON.stringify(this.commdity);
+				var commdity = this.commdity;
 				var steps = this.step;
+				uni.setStorageSync('comm',commdity)
+				uni.setStorageSync('steps',steps)
 				uni.navigateTo({
-					url:'../ack_order/ack_order?comm=' + encodeURIComponent(commdity) + "&step=" + steps
+					url:'../ack_order/ack_order'
 				})
 			}
 		}

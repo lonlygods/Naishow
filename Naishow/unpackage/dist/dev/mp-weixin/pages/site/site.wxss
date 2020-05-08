@@ -1,5 +1,5 @@
 
-.wxsite{
+.wxsite {
 	width: 100%;
 	height: 100rpx;
 	display: -webkit-box;
@@ -10,38 +10,43 @@
 	        justify-content: space-between;
 	background-color: #FCFCFC;
 }
-.wechat{
+.wechat {
 	width: 50rpx;
 	height: 50rpx;
 }
-.wxleft{
+.wxleft {
 	margin: 5% 0 0 5%;
 }
-.wxleft text{
+.wxleft text {
 	position: absolute;
 	top: 38rpx;
 }
-.wxright{
+.wxright {
 	margin: 5% 5% 0 0;
 }
-.check{
+.check {
 	position: absolute;
 	margin: 2% 0 0 0;
 }
 .site {
-		width: 90%;
-		height: 110rpx;
-		border-bottom: solid 3rpx #F2F2F2;
-		margin: 0 5%;
+	width: 90%;
+	height: 110rpx;
+	/* border-bottom: solid 3rpx #F2F2F2; */
+	margin: 0 5%;
 }
 .site_content {
-		margin: 2% 5%;
+	margin: 2% 5%;
 }
 .site_content text {
-		padding: 0 2%;
+	padding: 0 2%;
 }
 .edit {
-		position: absolute;
-		margin: -10% 0 0% 82%;
+	position: absolute;
+	margin: -10% 0 0% 82%;
+}
+.dibu {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
 }
 

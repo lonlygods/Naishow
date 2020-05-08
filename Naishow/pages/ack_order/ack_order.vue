@@ -1,14 +1,25 @@
 <template>
 	<view>
-		<view class="site" @click="site">
+		<view class="site" @click="site" v-if="userName =='' ">
 			<view class="left">
 				<view class="jia">
 					<van-icon name="plus" color="white" size="40px" />
 				</view>
 			</view>
-			<text class="siz">选择收货地址</text>
+			<view class="siz">
+				<text>选择收货地址</text>
+			</view>
 			<view class="right">
 				<van-icon name="arrow" color="#9B9C9E" size="20px" />
+			</view>
+		</view>
+		<view class="site2" @click="site" v-else>
+			<view class="site_content">
+				<text style="font-weight: bold;padding: 0 1%;">收货人:{{userName}}</text>
+				<text>{{telNumber}}</text>
+				<text>\n</text>
+				<text>收货地址:{{carmodel}}</text>
+				<text>{{detailInfo}}</text>
 			</view>
 		</view>
 		<view class="dashedBorder"></view>
@@ -77,20 +88,40 @@
 				commdity: [],
 				step: '',
 				popupimg: '',
-				total:''
+				total:'',
+				acksite:true,
+				acksite2:true,
+				userName:'',
+				telNumber:'',
+				detailInfo:'',
+				carmodel:''
 			}
 		},
 		onLoad(option) {
-			// console.log(option)
-			var commdity = JSON.parse(decodeURIComponent(option.comm));
-			var step = option.step
-			console.log(commdity)
+			console.log(option)
+			//默认地址
+			this.userName = option.userName;
+			this.telNumber = option.telNumber;
+			this.carmodel = option.carmodel;
+			this.detailInfo = option.detailInfo;
+			//商品信息
+			var commdity = uni.getStorageSync('comm');
+			var step = uni.getStorageSync('steps');
 			console.log(step)
-			this.commdity = commdity;
+			console.log(commdity)
+			this.commdity = commdity
 			this.step = step
 			this.popupimg = commdity.slideshow[0].slideshow
 			this.total = commdity.price * this.step
 			console.log(this.total)
+			
+			if(this.userName !== ''){
+				this.acksite = false;
+				this.acksite2 = true
+			}else{
+				this.acksite2 = false;
+				this.acksite = true
+			}
 		},
 		methods: {
 			site(){
@@ -129,7 +160,7 @@
 		height: 4upx;
 		background: linear-gradient(to right, #FF6D6D, #3283FA 18px, transparent 18px, transparent);
 		background-size: 30px 100%;
-		margin: 0% 0 0 0;
+		margin: 3% 0 0 0;
 	}
 
 	.title {
@@ -226,5 +257,17 @@
 		font-size: 36upx;
 		font-weight: bold;
 		margin: 3% 0 3% 0;
+	}
+	.site2{
+	  width: 100%;
+	  /* height: 100rpx; */
+	  /* border-bottom: solid 3rpx #EAEAEA; */
+	}
+	.site2 text{
+	  margin: 40rpx 0 0 0%;
+	  /* padding: 0 1%; */
+	}
+	.site_content{
+	  margin: 5% 0 0 0;
 	}
 </style>

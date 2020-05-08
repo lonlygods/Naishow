@@ -40,4 +40,9 @@
 .danyuan view{
 	width: 23%;
 }
+.dibu{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
 

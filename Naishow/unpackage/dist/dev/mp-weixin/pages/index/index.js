@@ -287,6 +287,9 @@ var _default =
       tel: '15036637653' };
 
   },
+  onLoad: function onLoad() {
+    uni.setStorageSync('commlist', []);
+  },
   methods: {
     news: function news(n) {
       console.log(n);

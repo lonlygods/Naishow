@@ -154,6 +154,9 @@
 				tel:'15036637653'
 			}
 		},
+		onLoad() {
+			uni.setStorageSync('commlist',[]);
+		},
 		methods: {
 			news(n){
 				console.log(n)

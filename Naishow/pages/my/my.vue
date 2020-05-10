@@ -24,17 +24,17 @@
 		</view>
 		<view class="midmoney">
 			<van-row gutter="15" style="margin: 0 0 0 15%;">
-				<van-col span="6">
+				<van-col span="5" offset="3">
 					<text>0.00</text>
 					<text>\n</text>
 					<text class="xia">余额</text>
 				</van-col>
-				<van-col span="6">
+				<van-col span="5">
 					<text>0</text>
 					<text>\n</text>
 					<text class="xia">积分</text>
 				</van-col>
-				<van-col span="6">
+				<van-col span="5">
 					<text>0</text>
 					<text>\n</text>
 					<text class="xia">卡</text>
@@ -200,7 +200,7 @@
 		color: #FDDDA5;
 		display: flex;
 		justify-content: center;
-		margin: -8% 0 0 25%;
+		margin: -8% 0 0 27%;
 		font-size: 26upx;
 	}
 
@@ -302,7 +302,8 @@
 	.mymsg {
 		width: 95%;
 		background-color: #FFFFFF;
-		border-radius: 16upx;
+		border-top-left-radius: 16upx;
+		border-top-right-radius: 16upx;
 		margin: 3% 0 0 2.5%;
 		height: 80upx;
 		display: flex;
@@ -314,7 +315,8 @@
 	.user {
 		width: 95%;
 		background-color: #FFFFFF;
-		border-radius: 16upx;
+		border-bottom-left-radius: 16upx;
+		border-bottom-right-radius: 16upx;
 		margin: 0% 0 0 2.5%;
 		height: 80upx;
 		display: flex;

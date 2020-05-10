@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/my/my",
-    "pages/index/index",
     "pages/shopping/shopping",
+    "pages/index/index",
     "pages/baby/baby",
     "pages/commdity_details/commdity_details",
     "pages/add_site/add_site",
     "pages/ack_order/ack_order",
-    "pages/site/site"
+    "pages/my/my",
+    "pages/site/site",
+    "pages/shoppingtext/shoppingtext"
   ],
   "subPackages": [],
   "window": {
@@ -68,7 +69,8 @@
     "van-row": "/wxcomponents/vant/row/index",
     "van-col": "/wxcomponents/vant/col/index",
     "van-grid": "/wxcomponents/vant/grid/index",
-    "van-grid-item": "/wxcomponents/vant/grid-item/index"
-  },
-  "sitemapLocation": "sitemap41.json"
+    "van-grid-item": "/wxcomponents/vant/grid-item/index",
+    "van-submit-bar": "/wxcomponents/vant/submit-bar/index",
+    "van-swipe-cell": "/wxcomponents/vant/swipe-cell/index"
+  }
 }

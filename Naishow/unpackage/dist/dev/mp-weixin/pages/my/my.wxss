@@ -50,7 +50,7 @@
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
 	        justify-content: center;
-	margin: -8% 0 0 25%;
+	margin: -8% 0 0 27%;
 	font-size: 26rpx;
 }
 .vip {
@@ -154,7 +154,8 @@
 .mymsg {
 	width: 95%;
 	background-color: #FFFFFF;
-	border-radius: 16rpx;
+	border-top-left-radius: 16rpx;
+	border-top-right-radius: 16rpx;
 	margin: 3% 0 0 2.5%;
 	height: 80rpx;
 	display: -webkit-box;
@@ -169,7 +170,8 @@
 .user {
 	width: 95%;
 	background-color: #FFFFFF;
-	border-radius: 16rpx;
+	border-bottom-left-radius: 16rpx;
+	border-bottom-right-radius: 16rpx;
 	margin: 0% 0 0 2.5%;
 	height: 80rpx;
 	display: -webkit-box;

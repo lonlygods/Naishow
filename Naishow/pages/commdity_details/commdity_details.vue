@@ -38,8 +38,8 @@
 		<van-goods-action>
 			<van-goods-action-icon icon="chat-o" text="客服" dot color="#94D098" />
 			<van-goods-action-icon icon="shop-o" text="店铺" />
-			<van-goods-action-icon icon="cart-o" text="购物车" info="5" />
-			<van-goods-action-button text="加入购物车" type="warning" color="#E1F4E3" />
+			<van-goods-action-icon icon="cart-o" text="购物车" info="5" @click="shop" />
+			<van-goods-action-button text="加入购物车" type="warning" color="#E1F4E3" @click="shopping" />
 			<van-goods-action-button text="立即购买" color="#6CBE72" @click="buy" />
 		</van-goods-action>
 		<view class="popup">
@@ -110,6 +110,47 @@
 				uni.navigateTo({
 					url:'../ack_order/ack_order'
 				})
+			},
+			shop(){
+				uni.switchTab({
+					url:'../shopping/shopping'
+				})
+			},
+			shopping(){
+				var commdity = this.commdity;
+				var steps = this.step;
+				// uni.setStorage({
+				//     key: 'commdity',
+				//     data: commdity,
+				//     success: function () {
+				//         console.log('success');
+				//     }
+				// });
+				var that = this;
+				let commlist = uni.getStorageSync('commlist');
+				console.log(commlist)
+				var comm={
+					pid:this.commdity.pid,
+					intro:this.commdity.intro,
+					price:this.commdity.price,
+					img:this.commdity.img,
+					step:steps,
+					check:false
+				};
+				commlist.push(comm)
+					// for(let c in commlist){
+					// 	if(commlist[c].pid == comm.pid){
+					// 		// commlist.splice(c,1)
+					// 		// console.log(1)
+					// 	}
+					// }
+				console.log(commlist)
+				uni.setStorageSync('commlist',commlist)
+				uni.setStorageSync('steps',steps)
+				uni.showToast({
+				    title: '添加购物车成功',
+				    duration: 2000
+				});
 			}
 		}
 	}

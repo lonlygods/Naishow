@@ -1,24 +1,18 @@
 {
 	"pages": [
 		{
-			"path": "pages/my/my",
+			"path": "pages/shopping/shopping",
 			"style": {
-				"navigationBarTitleText": "个人中心"
+				"navigationBarTitleText": "购物车"
 			}
-		}
-		,
+		},
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "奈雪商城"
 			}
 		},
-		{
-			"path": "pages/shopping/shopping",
-			"style": {
-				"navigationBarTitleText": "购物车"
-			}
-		},
+		
 		{
 			"path": "pages/baby/baby",
 			"style": {
@@ -26,41 +20,48 @@
 			}
 		},
 		{
-            "path" : "pages/commdity_details/commdity_details",
-            "style" : {
+			"path": "pages/commdity_details/commdity_details",
+			"style": {
 				"navigationBarTitleText": "商品详情"
 			}
-        }
-        ,
-		
+		},
 		{
-            "path" : "pages/add_site/add_site",
-            "style" : {
+			"path": "pages/add_site/add_site",
+			"style": {
 				"navigationBarTitleText": "新增地址"
 			}
-        },
+		},
 		{
-		    "path" : "pages/ack_order/ack_order",
-		    "style" : {
+			"path": "pages/ack_order/ack_order",
+			"style": {
 				"navigationBarTitleText": "确认订单"
 			}
-		}
-		,
+		},
 		{
-		    "path" : "pages/site/site",
-		    "style" : {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/site/site",
+			"style": {
 				"navigationBarTitleText": "地址列表"
 			}
 		}
+	    ,{
+            "path" : "pages/shoppingtext/shoppingtext",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "奈雪商城",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#FFFFFF",
-		"usingComponents":{
-			"van-sidebar":"/wxcomponents/vant/sidebar/index",
-			"van-sidebar-item":"/wxcomponents/vant/sidebar-item/index",
+		"usingComponents": {
+			"van-sidebar": "/wxcomponents/vant/sidebar/index",
+			"van-sidebar-item": "/wxcomponents/vant/sidebar-item/index",
 			"van-stepper": "/wxcomponents/vant/stepper/index",
 			"van-popup": "/wxcomponents/vant/popup/index",
 			"van-tag": "/wxcomponents/vant/tag/index",
@@ -77,7 +78,9 @@
 			"van-row": "/wxcomponents/vant/row/index",
 			"van-col": "/wxcomponents/vant/col/index",
 			"van-grid": "/wxcomponents/vant/grid/index",
-			"van-grid-item": "/wxcomponents/vant/grid-item/index"
+			"van-grid-item": "/wxcomponents/vant/grid-item/index",
+			"van-submit-bar": "/wxcomponents/vant/submit-bar/index",
+			"van-swipe-cell": "/wxcomponents/vant/swipe-cell/index"
 		}
 	},
 	"tabBar": {

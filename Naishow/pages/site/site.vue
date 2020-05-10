@@ -71,8 +71,7 @@
 			},
 			picksite() {
 				uni.navigateTo({
-					url: '../ack_order/ack_order?userName=' + this.userName + "&telNumber=" + this.telNumber + "&detailInfo=" + this
-						.detailInfo + "&carmodel=" + this.carmodel,
+					url: '../ack_order/ack_order?userName=' + this.userName + "&telNumber=" + this.telNumber + "&detailInfo=" + this.detailInfo + "&carmodel=" + this.carmodel,
 					animationType: 'pop-in',
 					animationDuration: 200
 				})

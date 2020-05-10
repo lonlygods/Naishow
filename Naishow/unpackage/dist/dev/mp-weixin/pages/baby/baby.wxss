@@ -1,1 +1,175 @@
-/* pages/baby/baby.wxss */
+
+.big {
+	height: 1500rpx;
+}
+.edge {
+	position: fixed;
+	top: 200rpx;
+	left: 0;
+}
+.activ {
+	width: 20%;
+}
+.head {
+	width: 100%;
+	height: 200rpx;
+	position: fixed;
+	top: 0;
+	background-color: #FFFFFF;
+	border-bottom: solid 1px #F3F3F3;
+	z-index: 20;
+}
+.head image {
+	width: 100rpx;
+	height: 100rpx;
+	margin: 3%;
+}
+.naitext {
+	font-size: 36rpx;
+	font-weight: bold;
+	position: absolute;
+	margin: 3% 0 0 0;
+}
+.order1 {
+	width: 80%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	line-height: 80rpx;
+	margin: -12% 0 0 17%;
+	font-size: 28rpx;
+}
+.orderleft1 {
+	color: #9FA0A2;
+	margin: 0 0 0 5%;
+}
+.orderright1 {
+	color: #9FA0A2;
+}
+.index {
+	width: 100%;
+}
+.home {
+	width: 80%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	line-height: 80rpx;
+	margin: -2% 0 0 0;
+	font-size: 28rpx;
+}
+.com {
+	width: 70%;
+	height: 120px;
+	margin: 25% 0 0 23%;
+}
+.commdity {
+	width: 100%;
+	height: 200rpx;
+}
+.commdity image {
+	width: 100px;
+	height: 100px;
+}
+.name {
+	position: absolute;
+	margin: 2% 0 0 3%;
+	font-size: 30rpx;
+}
+.price {
+	font-size: 32rpx;
+	color: #E02D3F;
+	/* position: absolute; */
+	margin: -3% 0 0 2%;
+}
+.step {
+	position: absolute;
+	margin: 20% 0 0 0;
+	right: 0;
+}
+.but {
+	width: 100%;
+	height: 90rpx;
+	bottom: 0;
+	position: fixed;
+	background-color: #FFFFFF;
+	color: #0F0F0F;
+	border-top: solid 1px #F3F3F3;
+	z-index: 4;
+}
+.shop {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.logo {
+	/* width: 130upx;
+	height: 110upx; */
+	margin: -3% 0 0 3%;
+}
+.total {
+	width: 45%;
+	font-size: 28rpx;
+	color: #0F0F0F;
+	font-weight: bold;
+	margin: 5%;
+}
+.rig {
+	width: 30%;
+	border-left: solid 1px #FFFFFF;
+	margin: 0 0 0 22%;
+}
+.xuanhaole {
+	font-size: 40rpx;
+	color: #FFFFFF;
+	position: relative;
+	top: 5%;
+	left: 40%;
+}
+.order {
+	font-size: 30rpx;
+	position: relative;
+	top: 40%;
+	right: 5%;
+}
+.pull {
+	width: 100%;
+	height: 150px;
+	background-color: #FFFFFF;
+	bottom: 7%;
+	position: fixed;
+	z-index: 3;
+}
+.shopdetails {
+	height: 30px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	/* justify-content: space-around; */
+}
+.tstep {
+	position: absolute;
+	right: 0;
+}
+.pullname{
+	font-size: 32rpx;
+	position: absolute;
+	margin: 0 0 0 5%;
+	width: 45%;
+	text-overflow:ellipsis;
+	overflow:hidden; 
+	white-space:nowrap;
+}
+.pullprice{
+	color: #333333;
+	position: absolute;
+	margin: 0 0 0 50%;
+	font-size: 32rpx;
+}
+

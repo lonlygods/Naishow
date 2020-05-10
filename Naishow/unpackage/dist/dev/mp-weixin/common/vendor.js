@@ -8644,7 +8644,7 @@ main();
 
 /***/ }),
 
-/***/ 51:
+/***/ 53:
 /*!*********************************************!*\
   !*** F:/uniApp/demo/Naishow/static/area.js ***!
   \*********************************************/
@@ -12714,7 +12714,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/shopping/shopping": { "navigationBarTitleText": "购物车", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/index/index": { "navigationBarTitleText": "奈雪商城", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/baby/baby": { "navigationBarTitleText": "宝贝分类", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/commdity_details/commdity_details": { "navigationBarTitleText": "商品详情", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/add_site/add_site": { "navigationBarTitleText": "新增地址", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/ack_order/ack_order": { "navigationBarTitleText": "确认订单", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/my/my": { "navigationBarTitleText": "个人中心", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/site/site": { "navigationBarTitleText": "地址列表", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/shoppingtext/shoppingtext": { "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "奈雪商城", "navigationBarBackgroundColor": "#FFFFFF", "backgroundColor": "#FFFFFF" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "奈雪商城" }, "pages/shopping/shopping": { "navigationBarTitleText": "购物车" }, "pages/baby/baby": { "navigationBarTitleText": "宝贝分类" }, "pages/commdity_details/commdity_details": { "navigationBarTitleText": "商品详情" }, "pages/add_site/add_site": { "navigationBarTitleText": "新增地址" }, "pages/ack_order/ack_order": { "navigationBarTitleText": "确认订单" }, "pages/my/my": { "navigationBarTitleText": "个人中心" }, "pages/site/site": { "navigationBarTitleText": "地址列表" }, "pages/shoppingtext/shoppingtext": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "奈雪商城", "navigationBarBackgroundColor": "#FFFFFF", "backgroundColor": "#FFFFFF" } };exports.default = _default;
 
 /***/ }),
 

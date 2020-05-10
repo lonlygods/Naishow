@@ -26,14 +26,14 @@
 						</view>
 					</view>
 				</view>
-				<view slot="right" class="van-swipe-cell__right" @click="delcomm">删除</view>
+				<view slot="right" class="van-swipe-cell__right" @click="delcomm(index)">删除</view>
 			</van-swipe-cell>
 		</view>
 
 
 		<view class="bon">
 			<van-submit-bar :price="total" button-text="结算" @submit="onClickButton" :tip="true">
-				<van-checkbox :value="checked" checked-color="#6CBE72" @change="onChange" class="check">全选</van-checkbox>
+				<van-checkbox :value="checked" checked-color="#6CBE72" @change="onChange" class="checkde">全选</van-checkbox>
 			</van-submit-bar>
 		</view>
 	</view>
@@ -48,7 +48,8 @@
 				popupimg: '',
 				step: '',
 				total: '',
-				red: 1
+				red: 1,
+				totalnum:''
 			}
 		},
 		onLoad() {
@@ -97,7 +98,6 @@
 						this.checked = false
 						break
 					}
-					if (this.commdity[i].check === false) {}
 				}
 				this.stepss();
 			},
@@ -123,16 +123,22 @@
 			//单选按钮与步进器公共函数
 			stepss() {
 				var total = 0;
+				var totalnum = 0;
 				for (let c in this.commdity) {
 					if (this.commdity[c].check == true) {
 						total += (this.commdity[c].price * this.commdity[c].step) * 100
 					}
+					totalnum += Number(this.commdity[c].step)
 				}
 				this.total = total;
+				this.totalnum = totalnum;
+				console.log('总数量：'+this.totalnum)
+				uni.setStorageSync('totalnum',this.totalnum)
 			},
 			//全选按钮与onshow公共函数
 			totall() {
 				var total = 0;
+				var totalnum = 0;
 				for (let c in this.commdity) {
 					if (this.checked == true) {
 						this.commdity[c].check = true
@@ -142,8 +148,12 @@
 					if (this.commdity[c].check == true) {
 						total += (this.commdity[c].price * this.commdity[c].step) * 100
 					}
+					totalnum += Number(this.commdity[c].step)
 				}
-				console.log(total)
+				this.totalnum = totalnum;
+				console.log('总数量：'+this.totalnum);
+				uni.setStorageSync('totalnum',this.totalnum)
+				// console.log(total)
 				if (this.checked == true) {
 					this.total = total;
 				} else {
@@ -151,17 +161,11 @@
 				}
 			},
 			//删除商品
-			delcomm(){
+			delcomm(index){
 				var commlist =this.commdity;
-				console.log(commlist)
-				for (let d in commlist) {
-					commlist.splice(commlist[d],d)
-					console.log(commlist[d])
-					console.log(d)
-				}
+				commlist.splice(index,1)
 				this.stepss();
-				console.log(commlist)
-				// uni.setStorageSync('commlist',commlist);
+				uni.setStorageSync('commlist',commlist);
 			}
 		}
 	}
@@ -170,7 +174,7 @@
 <style>
 	.big {
 		width: 100%;
-		height: 1500upx;
+		height: 1400upx;
 		background-color: #F9F9F9;
 		position: absolute;
 		top: 0;
@@ -270,5 +274,11 @@
 		text-align: center;
 		font-weight: bold;
 		background-color: #f44;
+	}
+	.check{
+		margin: 12% 2%;
+	}
+	.checkde{
+		margin: 0 4%;
 	}
 </style>

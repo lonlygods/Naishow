@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/shopping/shopping",
     "pages/index/index",
+    "pages/shopping/shopping",
     "pages/baby/baby",
     "pages/commdity_details/commdity_details",
     "pages/add_site/add_site",
@@ -72,5 +72,6 @@
     "van-grid-item": "/wxcomponents/vant/grid-item/index",
     "van-submit-bar": "/wxcomponents/vant/submit-bar/index",
     "van-swipe-cell": "/wxcomponents/vant/swipe-cell/index"
-  }
+  },
+  "sitemapLocation": "sitemap42.json"
 }

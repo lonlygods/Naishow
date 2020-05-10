@@ -38,7 +38,7 @@
 		<van-goods-action>
 			<van-goods-action-icon icon="chat-o" text="客服" dot color="#94D098" />
 			<van-goods-action-icon icon="shop-o" text="店铺" />
-			<van-goods-action-icon icon="cart-o" text="购物车" info="5" @click="shop" />
+			<van-goods-action-icon icon="cart-o" text="购物车" :info="totalnum" @click="shop" />
 			<van-goods-action-button text="加入购物车" type="warning" color="#E1F4E3" @click="shopping" />
 			<van-goods-action-button text="立即购买" color="#6CBE72" @click="buy" />
 		</van-goods-action>
@@ -77,7 +77,8 @@
 				slideshow: [], //轮播
 				show: false,
 				popupimg:'',
-				step:'1'
+				step:'1',
+				totalnum:''
 			}
 		},
 		onLoad(news) {
@@ -89,6 +90,7 @@
 			console.log(this.slideshow)
 			this.popupimg = item.slideshow[0].slideshow
 			// console.log(this.popupimg)
+			this.totalnum = uni.getStorageSync('totalnum')
 		},
 		methods: {
 			buy() {

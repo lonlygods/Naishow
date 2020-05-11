@@ -88,6 +88,6 @@
 	width: 50rpx;
 	height: 50rpx;
 	border-radius: 50%;
-	margin: 15%;
+	margin: 18%;
 }
 

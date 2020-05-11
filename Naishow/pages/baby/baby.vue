@@ -49,6 +49,9 @@
 			</view>
 		</view>
 		<view class="pull" v-show="show">
+			<view class="pulltop">
+				<text>购物车</text>
+			</view>
 			<view class="shopdetails" v-for="(shopcom,index) in commdity" :key="shopcom.id" v-if="shopcom.num">
 				<text class="pullname">{{shopcom.name}}</text>
 				<text class="pullprice">￥{{shopcom.price}}.00</text>
@@ -178,7 +181,7 @@
 
 <style>
 	.big {
-		height: 1500rpx;
+		height: 1200rpx;
 	}
 
 	.edge {
@@ -225,7 +228,7 @@
 
 	.orderleft1 {
 		color: #9FA0A2;
-		margin: 0 0 0 5%;
+		margin: 0 0 0 3%;
 	}
 
 	.orderright1 {
@@ -243,6 +246,9 @@
 		line-height: 80upx;
 		margin: -2% 0 0 0;
 		font-size: 28upx;
+	}
+	.orderleft{
+		margin: 0 0 0 4%; 
 	}
 
 	.com {
@@ -332,16 +338,20 @@
 
 	.pull {
 		width: 100%;
-		height: 150px;
+		height: auto;
 		background-color: #FFFFFF;
-		bottom: 7%;
+		bottom: 5%;
 		position: fixed;
 		z-index: 3;
+		overflow: auto;
 	}
-
+	.pull::-webkit-scrollbar {
+		border-width:1px;
+	}
 	.shopdetails {
 		height: 30px;
 		display: flex;
+		margin: 2% 0;
 		/* justify-content: space-around; */
 	}
 
@@ -359,9 +369,22 @@
 		white-space:nowrap;
 	}
 	.pullprice{
-		color: #333333;
+		color: #E02D3F;
 		position: absolute;
 		margin: 0 0 0 50%;
 		font-size: 32rpx;
+	}
+	.pulltop{
+		width: 100%;
+		height: 60upx;
+		font-size: 34upx;
+		line-height: 20px;
+		font-weight: bold;
+		border-left: solid 8upx #E02D3F;
+		border-bottom: solid 3upx #F2F2F2;
+	}
+	.pulltop text{
+		display: inline-block;
+		margin:2% 0 0 3%;
 	}
 </style>

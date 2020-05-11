@@ -43,13 +43,14 @@
 	export default {
 		data() {
 			return {
-				checked: true,
+				checked: false,
 				commdity: [],
 				popupimg: '',
 				step: '',
 				total: '',
 				red: 1,
-				totalnum:''
+				totalnum:'',
+				comnum:''
 			}
 		},
 		onLoad() {
@@ -61,6 +62,9 @@
 			this.commdity = commlist;
 			console.log(this.commdity);
 			this.totall();
+			this.comnum = this.commdity.length
+			console.log(this.comnum)
+			uni.setStorageSync('comnum',this.comnum)
 		},
 		methods: {
 			home() {
@@ -133,7 +137,6 @@
 				this.total = total;
 				this.totalnum = totalnum;
 				console.log('总数量：'+this.totalnum)
-				uni.setStorageSync('totalnum',this.totalnum)
 			},
 			//全选按钮与onshow公共函数
 			totall() {
@@ -152,7 +155,6 @@
 				}
 				this.totalnum = totalnum;
 				console.log('总数量：'+this.totalnum);
-				uni.setStorageSync('totalnum',this.totalnum)
 				// console.log(total)
 				if (this.checked == true) {
 					this.total = total;
@@ -163,7 +165,10 @@
 			//删除商品
 			delcomm(index){
 				var commlist =this.commdity;
-				commlist.splice(index,1)
+				commlist.splice(index,1);
+				this.comnum = this.commdity.length
+				console.log(this.comnum)
+				uni.setStorageSync('comnum',this.comnum)
 				this.stepss();
 				uni.setStorageSync('commlist',commlist);
 			}
@@ -280,5 +285,10 @@
 	}
 	.checkde{
 		margin: 0 4%;
+	}
+	.bon .van-checkbox{
+		position: absolute;
+		left: 3%;
+		top: 30upx;
 	}
 </style>

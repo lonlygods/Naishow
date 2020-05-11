@@ -1,6 +1,6 @@
 
 .big {
-	height: 1500rpx;
+	height: 1200rpx;
 }
 .edge {
 	position: fixed;
@@ -44,7 +44,7 @@
 }
 .orderleft1 {
 	color: #9FA0A2;
-	margin: 0 0 0 5%;
+	margin: 0 0 0 3%;
 }
 .orderright1 {
 	color: #9FA0A2;
@@ -63,6 +63,9 @@
 	line-height: 80rpx;
 	margin: -2% 0 0 0;
 	font-size: 28rpx;
+}
+.orderleft{
+	margin: 0 0 0 4%;
 }
 .com {
 	width: 70%;
@@ -140,17 +143,22 @@
 }
 .pull {
 	width: 100%;
-	height: 150px;
+	height: auto;
 	background-color: #FFFFFF;
-	bottom: 7%;
+	bottom: 5%;
 	position: fixed;
 	z-index: 3;
+	overflow: auto;
+}
+.pull::-webkit-scrollbar {
+	border-width:1px;
 }
 .shopdetails {
 	height: 30px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
+	margin: 2% 0;
 	/* justify-content: space-around; */
 }
 .tstep {
@@ -167,9 +175,22 @@
 	white-space:nowrap;
 }
 .pullprice{
-	color: #333333;
+	color: #E02D3F;
 	position: absolute;
 	margin: 0 0 0 50%;
 	font-size: 32rpx;
+}
+.pulltop{
+	width: 100%;
+	height: 60rpx;
+	font-size: 34rpx;
+	line-height: 20px;
+	font-weight: bold;
+	border-left: solid 8rpx #E02D3F;
+	border-bottom: solid 3rpx #F2F2F2;
+}
+.pulltop text{
+	display: inline-block;
+	margin:2% 0 0 3%;
 }
 

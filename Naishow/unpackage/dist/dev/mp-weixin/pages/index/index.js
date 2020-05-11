@@ -242,7 +242,7 @@ var _default =
 
 
       teacomm: [{
-        pid: 1,
+        pid: 3,
         img: 'https://s1.ax1x.com/2020/05/07/YeGfgA.png',
         name: '飘香茗茶系列',
         intro: '奈雪的茶 品尝悠闲·茶礼盒',
@@ -267,7 +267,7 @@ var _default =
         num: '50' },
 
       {
-        pid: 2,
+        pid: 4,
         img: 'https://s1.ax1x.com/2020/05/07/YeGb4g.png',
         name: '雅月·名优乌龙',
         intro: '奈雪【小茶盒】雅月·名优乌龙 上等乌龙',

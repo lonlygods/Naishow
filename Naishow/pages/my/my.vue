@@ -30,19 +30,19 @@
 					<text class="xia">余额</text>
 				</van-col>
 				<van-col span="5">
-					<text>0</text>
+					<text style="margin: 0 0 0 15upx;">0</text>
 					<text>\n</text>
 					<text class="xia">积分</text>
 				</van-col>
 				<van-col span="5">
-					<text>0</text>
+					<text style="margin: 0 0 0 10upx;">0</text>
 					<text>\n</text>
 					<text class="xia">卡</text>
 				</van-col>
-				<van-col span="6">
+				<van-col span="5">
 					<text style="margin: 0 0 0 40upx;">0</text>
 					<text>\n</text>
-					<text class="xia">优惠券/码</text>
+					<text class="xia">优惠券</text>
 				</van-col>
 			</van-row>
 		</view>

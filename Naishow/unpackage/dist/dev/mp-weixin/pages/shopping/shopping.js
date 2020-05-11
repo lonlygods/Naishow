@@ -176,13 +176,14 @@ var _default =
 {
   data: function data() {
     return {
-      checked: true,
+      checked: false,
       commdity: [],
       popupimg: '',
       step: '',
       total: '',
       red: 1,
-      totalnum: '' };
+      totalnum: '',
+      comnum: '' };
 
   },
   onLoad: function onLoad() {
@@ -194,6 +195,9 @@ var _default =
     this.commdity = commlist;
     console.log(this.commdity);
     this.totall();
+    this.comnum = this.commdity.length;
+    console.log(this.comnum);
+    uni.setStorageSync('comnum', this.comnum);
   },
   methods: {
     home: function home() {
@@ -266,7 +270,6 @@ var _default =
       this.total = total;
       this.totalnum = totalnum;
       console.log('总数量：' + this.totalnum);
-      uni.setStorageSync('totalnum', this.totalnum);
     },
     //全选按钮与onshow公共函数
     totall: function totall() {
@@ -285,7 +288,6 @@ var _default =
       }
       this.totalnum = totalnum;
       console.log('总数量：' + this.totalnum);
-      uni.setStorageSync('totalnum', this.totalnum);
       // console.log(total)
       if (this.checked == true) {
         this.total = total;
@@ -297,6 +299,9 @@ var _default =
     delcomm: function delcomm(index) {
       var commlist = this.commdity;
       commlist.splice(index, 1);
+      this.comnum = this.commdity.length;
+      console.log(this.comnum);
+      uni.setStorageSync('comnum', this.comnum);
       this.stepss();
       uni.setStorageSync('commlist', commlist);
     } } };exports.default = _default;

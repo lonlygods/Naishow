@@ -210,8 +210,9 @@ var _default =
       slideshow: [], //轮播
       show: false,
       popupimg: '',
-      step: '1',
-      totalnum: '' };
+      step: 1,
+      comnum: '',
+      but: '' };
 
   },
   onLoad: function onLoad(news) {
@@ -222,12 +223,12 @@ var _default =
     this.slideshow = item.slideshow;
     console.log(this.slideshow);
     this.popupimg = item.slideshow[0].slideshow;
-    // console.log(this.popupimg)
-    this.totalnum = uni.getStorageSync('totalnum');
+    // this.comnum = uni.getStorageSync('comnum')
   },
   methods: {
     buy: function buy() {
       this.show = !this.show;
+      this.but = '下一步';
     },
     onClose: function onClose() {
       this.show = false;
@@ -237,14 +238,55 @@ var _default =
       this.step = event.detail;
     },
     next: function next() {
-      // var commdity = JSON.stringify(this.commdity);
-      var commdity = this.commdity;
-      var steps = this.step;
-      uni.setStorageSync('comm', commdity);
-      uni.setStorageSync('steps', steps);
-      uni.navigateTo({
-        url: '../ack_order/ack_order' });
+      if (this.but == '加入购物车') {
+        var commdity = this.commdity;
+        var steps = this.step;
+        var that = this;
+        this.show = true;
+        this.but = '加入购物车';
+        var commlist = uni.getStorageSync('commlist');
+        console.log(commlist);
+        var comm = {
+          pid: this.commdity.pid,
+          intro: this.commdity.intro,
+          price: this.commdity.price,
+          img: this.commdity.img,
+          step: steps,
+          check: false };
 
+        var s = 0;
+        for (var c in commlist) {
+          if (commlist[c].pid == comm.pid) {
+            s = 1;
+            commlist[c].step += comm.step;
+            break;
+          } else {
+            s = 0;
+          }
+        }
+        if (s == 0) {
+          commlist.push(comm);
+        }
+        console.log(commlist);
+        this.comnum = commlist.length;
+        uni.setStorageSync('comnum', commlist.length);
+        uni.setStorageSync('commlist', commlist);
+        uni.setStorageSync('steps', steps);
+        uni.showToast({
+          title: '添加购物车成功',
+          duration: 2000 });
+
+        this.show = false;
+      } else {
+        // var commdity = JSON.stringify(this.commdity);
+        var commdity = this.commdity;
+        var steps = this.step;
+        uni.setStorageSync('comm', commdity);
+        uni.setStorageSync('steps', steps);
+        uni.navigateTo({
+          url: '../ack_order/ack_order' });
+
+      }
     },
     shop: function shop() {
       uni.switchTab({
@@ -252,40 +294,42 @@ var _default =
 
     },
     shopping: function shopping() {
-      var commdity = this.commdity;
-      var steps = this.step;
-      // uni.setStorage({
-      //     key: 'commdity',
-      //     data: commdity,
-      //     success: function () {
-      //         console.log('success');
-      //     }
-      // });
-      var that = this;
-      var commlist = uni.getStorageSync('commlist');
-      console.log(commlist);
-      var comm = {
-        pid: this.commdity.pid,
-        intro: this.commdity.intro,
-        price: this.commdity.price,
-        img: this.commdity.img,
-        step: steps,
-        check: false };
+      this.show = true;
+      this.but = '加入购物车';
+      // var commdity = this.commdity;
+      // var steps = this.step;
+      // var that = this;
 
-      commlist.push(comm);
-      // for(let c in commlist){
-      // 	if(commlist[c].pid == comm.pid){
-      // 		// commlist.splice(c,1)
-      // 		// console.log(1)
+      // let commlist = uni.getStorageSync('commlist');
+      // console.log(commlist)
+      // var comm={
+      // 	pid:this.commdity.pid,
+      // 	intro:this.commdity.intro,
+      // 	price:this.commdity.price,
+      // 	img:this.commdity.img,
+      // 	step:steps,
+      // 	check:false
+      // };
+      // var s = 0;
+      // 	for(let c in commlist){
+      // 		if(commlist[c].pid == comm.pid){
+      // 			s = 1;
+      // 			commlist[c].step = comm.step;
+      // 			break;
+      // 		}else{
+      // 			s = 0;
+      // 		}
       // 	}
-      // }
-      console.log(commlist);
-      uni.setStorageSync('commlist', commlist);
-      uni.setStorageSync('steps', steps);
-      uni.showToast({
-        title: '添加购物车成功',
-        duration: 2000 });
-
+      // 	if (s == 0){
+      // 		commlist.push(comm)
+      // 	}
+      // console.log(commlist)
+      // uni.setStorageSync('commlist',commlist)
+      // uni.setStorageSync('steps',steps)
+      // uni.showToast({
+      //     title: '添加购物车成功',
+      //     duration: 2000
+      // });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
